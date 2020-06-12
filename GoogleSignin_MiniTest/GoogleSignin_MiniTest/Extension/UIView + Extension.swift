@@ -10,8 +10,24 @@ import UIKit
 
 
 extension UIView {
-    func setRadius(for view: UIView, radius: CGFloat) {
-        view.layer.cornerRadius = radius
-        view.layer.masksToBounds = true
+    //MARK:--- Radius
+    func addRadius(radius: CGFloat) {
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
     }
+    //MARK:--- Shadow
+    func addShadow(color: CGColor, opacity: Float, radius: CGFloat, offset: CGSize) {
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowColor = color
+        self.layer.shadowRadius =  radius
+        self.layer.shadowOffset = offset
+        self.layer.masksToBounds = false
+    }
+    //MARK:--- Tap Gesture
+    func addGesture(taget: Any, selector: Selector) {
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(UITapGestureRecognizer(target: taget, action: selector))
+    }
+    
+    
 }

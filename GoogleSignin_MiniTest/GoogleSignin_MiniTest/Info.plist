@@ -67,5 +67,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1Ijoibmd1eWVudmFucGhpdHVvYyIsImEiOiJja2JhZnVjcnQwNjUxMnFuMTZhYmN3ZHN4In0.TMiK5OwogtkBarJ-N2aVmw</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>googlechromes</string>
+        <string>comgooglemaps</string>
+    </array>
 </dict>
 </plist>

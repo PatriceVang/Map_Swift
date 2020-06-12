@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleSignIn
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,8 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        // Initialize sign-in
+        //--- Initialize sign-in
         GIDSignIn.sharedInstance().clientID = "339883821140-2hp2k5cpsr35hr8hc26430b0n3qc672g.apps.googleusercontent.com"
+        
+        //--- API GoogleMap
+        GMSServices.provideAPIKey("AIzaSyDCVVFZnx8eRESiWe2N5pjtuMBOl7ZJBM0")
+        GMSPlacesClient.provideAPIKey("AIzaSyDCVVFZnx8eRESiWe2N5pjtuMBOl7ZJBM0")
         return true
     }
 

@@ -13,17 +13,18 @@ class LoginVC: UIViewController {
     @IBOutlet weak var googleSignIn_Btn: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         goolgeSignIn()
         customElement()
     }
-    //MARK: Custom Element
+    //MARK:--- Custom Element
     private func customElement() {
-        googleSignIn_Btn.setRadius(for: googleSignIn_Btn, radius: googleSignIn_Btn.frame.height / 2)
+        googleSignIn_Btn.addRadius(radius: googleSignIn_Btn.frame.height / 2)
         googleSignIn_Btn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTapGoogleSignInBtn)))
         googleSignIn_Btn.isUserInteractionEnabled = true
     }
     
-    //MARK: Google SignIn
+    //MARK:--- Google SignIn
     private func goolgeSignIn() {
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance()?.presentingViewController = self
@@ -46,8 +47,7 @@ extension LoginVC: GIDSignInDelegate {
           }
           return
         } else {
-            print("login success")
-            
+            self.navigationController?.pushViewController(HomeVC(), animated: true)
         }
     }
 }
