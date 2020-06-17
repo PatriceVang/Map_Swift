@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,11 +23,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3c-wJ-1ma">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QI3-eO-pWD">
-                    <rect key="frame" x="20" y="54" width="374" height="50"/>
+                    <rect key="frame" x="20" y="40" width="374" height="50"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXv-zl-Z41">
                             <rect key="frame" x="10" y="0.0" width="364" height="50"/>
@@ -48,7 +47,7 @@
                                         <constraint firstAttribute="width" constant="50" id="k0m-Xu-QHK"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place, Bis or Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-ve-N5b">
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place, Bus or Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-ve-N5b">
                                     <rect key="frame" x="50" y="0.0" width="314" height="50"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -67,7 +66,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4M-gR-b6w">
-                    <rect key="frame" x="364" y="124" width="40" height="90"/>
+                    <rect key="frame" x="364" y="110" width="40" height="90"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DHO-H2-Vc1">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="90"/>
@@ -115,7 +114,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRw-0Q-oUf">
-                    <rect key="frame" x="364" y="732" width="40" height="80"/>
+                    <rect key="frame" x="364" y="716" width="40" height="80"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="so4-DF-Tr7">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="80"/>
@@ -173,19 +172,18 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="s3c-wJ-1ma" secondAttribute="bottom" id="7CI-NA-wcT"/>
-                <constraint firstItem="QI3-eO-pWD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9Cp-98-Y7I"/>
-                <constraint firstItem="s3c-wJ-1ma" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IUk-sr-yv9"/>
-                <constraint firstItem="s3c-wJ-1ma" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ofc-NE-SaO"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="L4M-gR-b6w" secondAttribute="trailing" constant="10" id="RvW-vc-ytj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QI3-eO-pWD" secondAttribute="trailing" constant="20" id="VOx-8L-Iz1"/>
+                <constraint firstAttribute="bottom" secondItem="s3c-wJ-1ma" secondAttribute="bottom" id="7CI-NA-wcT"/>
+                <constraint firstItem="QI3-eO-pWD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="9Cp-98-Y7I"/>
+                <constraint firstItem="s3c-wJ-1ma" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IUk-sr-yv9"/>
+                <constraint firstItem="s3c-wJ-1ma" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ofc-NE-SaO"/>
+                <constraint firstAttribute="trailing" secondItem="L4M-gR-b6w" secondAttribute="trailing" constant="10" id="RvW-vc-ytj"/>
+                <constraint firstAttribute="trailing" secondItem="QI3-eO-pWD" secondAttribute="trailing" constant="20" id="VOx-8L-Iz1"/>
                 <constraint firstItem="L4M-gR-b6w" firstAttribute="top" secondItem="QI3-eO-pWD" secondAttribute="bottom" constant="20" id="YPF-cb-aRD"/>
-                <constraint firstItem="QI3-eO-pWD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="kTm-3M-9MK"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="s3c-wJ-1ma" secondAttribute="trailing" id="x0I-fd-jC9"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZRw-0Q-oUf" secondAttribute="trailing" constant="10" id="xWx-oI-5h8"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZRw-0Q-oUf" secondAttribute="bottom" constant="50" id="zJm-mS-tz5"/>
+                <constraint firstItem="QI3-eO-pWD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="kTm-3M-9MK"/>
+                <constraint firstAttribute="trailing" secondItem="s3c-wJ-1ma" secondAttribute="trailing" id="x0I-fd-jC9"/>
+                <constraint firstAttribute="trailing" secondItem="ZRw-0Q-oUf" secondAttribute="trailing" constant="10" id="xWx-oI-5h8"/>
+                <constraint firstAttribute="bottom" secondItem="ZRw-0Q-oUf" secondAttribute="bottom" constant="100" id="zJm-mS-tz5"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="654" y="388"/>
         </view>
     </objects>

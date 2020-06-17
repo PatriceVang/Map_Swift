@@ -16,7 +16,7 @@ protocol MapFactory {
 }
 
 class ContainerFactory {
-    //--- use for Map
+    //--- Use for Map
     var frame: CGRect?
 }
 

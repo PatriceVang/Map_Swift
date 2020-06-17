@@ -11,19 +11,25 @@ import UIKit
 
 class Resource {
     
-    static let shared = Resource()
     
     //MARK:--- Image
     class Image {
-        let google: UIImage = UIImage(named: "google_img")!
-        let camera: UIImage = UIImage(named: "cameraWhite_img")!
-        let menuSearch: UIImage = UIImage(named: "menuSearch_img")!
-        let stack: UIImage = UIImage(named: "stack_img")!
-        
+        static let google: UIImage = UIImage(named: "google_img")!
+        static let camera: UIImage = UIImage(named: "cameraWhite_img")!
+        static let menuSearch: UIImage = UIImage(named: "menuSearch_img")!
+        static let stack: UIImage = UIImage(named: "stack_img")!
+        static let maker: UIImage = UIImage(named: "maker")!
+        static let bus: UIImage = UIImage(named: "bus_img")!
     }
     //MARK:--- Color
     class Color {
-        let pickerColor: UIColor = #colorLiteral(red: 0.000219328067, green: 0.164696604, blue: 0.49053514, alpha: 1)
+        static let pickerColor: UIColor = #colorLiteral(red: 0.000219328067, green: 0.164696604, blue: 0.49053514, alpha: 1)
+        static let naviBarColor: UIColor = #colorLiteral(red: 0.07781187445, green: 0.2245084047, blue: 0.6976864934, alpha: 1)
+        static let bgSearchTfColor: UIColor = #colorLiteral(red: 0.06479276717, green: 0.1921555698, blue: 0.5980993509, alpha: 1)
+        static let headerCatagoriesColor: UIColor = #colorLiteral(red: 0.944617033, green: 0.9566000104, blue: 0.9772842526, alpha: 1)
     }
-    
+    //MARK:--- Text
+    class Text {
+        static let categories = "Categories"
+    }
 }

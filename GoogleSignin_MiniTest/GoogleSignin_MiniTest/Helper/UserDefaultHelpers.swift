@@ -10,6 +10,7 @@ import Foundation
 
 enum UserDefaultKeys: String {
     case switchMap = "switchMap"
+    case updateLocation = "updateLocation"
 }
 
 class UserDefaultHelpers {
@@ -23,6 +24,16 @@ class UserDefaultHelpers {
         get {
             let currentValue =  loadObject(Bool.self, key: .switchMap)
             return currentValue ?? false
+        }
+    }
+    //--- Use update current location
+    var updateLocation: Bool {
+        set {
+            saveObjet(object: newValue, key: .updateLocation)
+        }
+        get {
+            let newLocation = loadObject(Bool.self, key: .updateLocation)
+            return newLocation ?? false
         }
     }
     

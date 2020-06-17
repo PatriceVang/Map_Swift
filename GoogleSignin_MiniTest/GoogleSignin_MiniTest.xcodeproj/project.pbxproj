@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186C15CA2498816100EDDB23 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C15C82498816100EDDB23 /* SearchVC.swift */; };
+		186C15CB2498816100EDDB23 /* SearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186C15C92498816100EDDB23 /* SearchVC.xib */; };
+		186C15D42498AC8C00EDDB23 /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C15D22498AC8C00EDDB23 /* RecentCell.swift */; };
+		186C15D52498AC8C00EDDB23 /* RecentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186C15D32498AC8C00EDDB23 /* RecentCell.xib */; };
+		186C15DA2498ACB900EDDB23 /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C15D82498ACB900EDDB23 /* CategoriesCell.swift */; };
+		186C15DB2498ACB900EDDB23 /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186C15D92498ACB900EDDB23 /* CategoriesCell.xib */; };
+		186C15DD2498B9A200EDDB23 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C15DC2498B9A200EDDB23 /* APICaller.swift */; };
+		186C15E02498C3E300EDDB23 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C15DF2498C3E300EDDB23 /* Coordinate.swift */; };
 		1872CFFB249323620044EDED /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1872CFF9249323620044EDED /* HomeVC.swift */; };
 		1872CFFC249323620044EDED /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1872CFFA249323620044EDED /* HomeVC.xib */; };
 		1872CFFF24932B520044EDED /* Map_MapBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1872CFFE24932B520044EDED /* Map_MapBox.swift */; };
@@ -29,6 +37,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		186C15C82498816100EDDB23 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		186C15C92498816100EDDB23 /* SearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchVC.xib; sourceTree = "<group>"; };
+		186C15D22498AC8C00EDDB23 /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
+		186C15D32498AC8C00EDDB23 /* RecentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentCell.xib; sourceTree = "<group>"; };
+		186C15D82498ACB900EDDB23 /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
+		186C15D92498ACB900EDDB23 /* CategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
+		186C15DC2498B9A200EDDB23 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		186C15DF2498C3E300EDDB23 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		1872CFF9249323620044EDED /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		1872CFFA249323620044EDED /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		1872CFFE24932B520044EDED /* Map_MapBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_MapBox.swift; sourceTree = "<group>"; };
@@ -74,6 +90,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		186C15C72498813B00EDDB23 /* SearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				186C15CD2498AC2E00EDDB23 /* Cell */,
+				186C15C82498816100EDDB23 /* SearchVC.swift */,
+				186C15C92498816100EDDB23 /* SearchVC.xib */,
+			);
+			path = SearchVC;
+			sourceTree = "<group>";
+		};
+		186C15CD2498AC2E00EDDB23 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				186C15D72498ACA200EDDB23 /* Categories */,
+				186C15D62498AC9200EDDB23 /* RecentCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		186C15D62498AC9200EDDB23 /* RecentCell */ = {
+			isa = PBXGroup;
+			children = (
+				186C15D22498AC8C00EDDB23 /* RecentCell.swift */,
+				186C15D32498AC8C00EDDB23 /* RecentCell.xib */,
+			);
+			path = RecentCell;
+			sourceTree = "<group>";
+		};
+		186C15D72498ACA200EDDB23 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				186C15D82498ACB900EDDB23 /* CategoriesCell.swift */,
+				186C15D92498ACB900EDDB23 /* CategoriesCell.xib */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		186C15DE2498C3C700EDDB23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				186C15DF2498C3E300EDDB23 /* Coordinate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1872CFF8249323480044EDED /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +177,7 @@
 			children = (
 				1872D00D24932D700044EDED /* Factory.swift */,
 				1872D00F24932F0C0044EDED /* UserDefaultHelpers.swift */,
+				186C15DC2498B9A200EDDB23 /* APICaller.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -157,6 +219,7 @@
 		18D46EEC248F38DF00D020E6 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				186C15DE2498C3C700EDDB23 /* Model */,
 				1872CFFD24932B410044EDED /* Component */,
 				18D46EFD248F4C7500D020E6 /* Screen */,
 			);
@@ -191,6 +254,7 @@
 		18D46EFD248F4C7500D020E6 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				186C15C72498813B00EDDB23 /* SearchVC */,
 				18D46EED248F38E500D020E6 /* SignIn */,
 				1872CFF8249323480044EDED /* Home */,
 				1872D00224932C4B0044EDED /* Profile */,
@@ -269,11 +333,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1872D00624932C6E0044EDED /* ProfileTableVC.xib in Resources */,
+				186C15CB2498816100EDDB23 /* SearchVC.xib in Resources */,
 				18D46EF2248F390D00D020E6 /* LoginVC.xib in Resources */,
 				1872D00B24932C8D0044EDED /* OptionCell.xib in Resources */,
 				1872CFFC249323620044EDED /* HomeVC.xib in Resources */,
+				186C15D52498AC8C00EDDB23 /* RecentCell.xib in Resources */,
 				18D46EE5248F359D00D020E6 /* LaunchScreen.storyboard in Resources */,
 				18D46EE2248F359D00D020E6 /* Assets.xcassets in Resources */,
+				186C15DB2498ACB900EDDB23 /* CategoriesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,16 +410,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186C15DA2498ACB900EDDB23 /* CategoriesCell.swift in Sources */,
 				1872D00A24932C8D0044EDED /* OptionCell.swift in Sources */,
 				18D46ED9248F359D00D020E6 /* AppDelegate.swift in Sources */,
 				1872D00E24932D700044EDED /* Factory.swift in Sources */,
+				186C15D42498AC8C00EDDB23 /* RecentCell.swift in Sources */,
 				18D46EDB248F359D00D020E6 /* SceneDelegate.swift in Sources */,
 				18D46EFB248F48C700D020E6 /* UIView + Extension.swift in Sources */,
+				186C15DD2498B9A200EDDB23 /* APICaller.swift in Sources */,
 				1872CFFB249323620044EDED /* HomeVC.swift in Sources */,
 				1872D01024932F0C0044EDED /* UserDefaultHelpers.swift in Sources */,
+				186C15E02498C3E300EDDB23 /* Coordinate.swift in Sources */,
 				1872D00524932C6E0044EDED /* ProfileTableVC.swift in Sources */,
 				18D46EF1248F390D00D020E6 /* LoginVC.swift in Sources */,
 				1872CFFF24932B520044EDED /* Map_MapBox.swift in Sources */,
+				186C15CA2498816100EDDB23 /* SearchVC.swift in Sources */,
 				1872D00124932B5E0044EDED /* Map_GoogleMap.swift in Sources */,
 				18D46EF8248F455900D020E6 /* Resource.swift in Sources */,
 			);
@@ -492,6 +564,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5493SYWL5;
 				INFOPLIST_FILE = GoogleSignin_MiniTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -510,6 +583,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5493SYWL5;
 				INFOPLIST_FILE = GoogleSignin_MiniTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
