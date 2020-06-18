@@ -19,20 +19,22 @@ class APICaller {
         let header: HTTPHeaders = [
             "api_key": "t6q3AIjL6NQdwZk732qdAIXl87Y4B7BX"
         ]
-//
-//        AF.request(url, method: .get).responseDecodable(of: T.self) { (response) in
-//            switch response.result {
-//            case .success(let result):
-//                completion(result)
-//            case .failure(let err):
-//                print(err.localizedDescription)
-//            }
+
+//        DispatchQueue.global(qos: .utility).async {
+            //        AF.request(url, method: .get).responseDecodable(of: T.self) { (response) in
+            //            switch response.result {
+            //            case .success(let result):
+            //                completion(result)
+            //            case .failure(let err):
+            //                print(err.localizedDescription)
+            //            }
+            //        }
 //        }
-        
-        AF.request(url, method: .get, headers: header).responseJSON { (response) in
-            print(response.value)
+
+        DispatchQueue.global(qos: .utility).async {
+            AF.request(url, method: .get, headers: header).responseJSON { (response) in
+                print(response.value as Any)
+            }
         }
     }
-    
-    
 }

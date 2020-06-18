@@ -29,7 +29,7 @@ class MapBox: MGLMapView{
         
         
         //--- Location Manger
-        locationManager.delegate = self
+//        locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { (Timer) in
@@ -57,38 +57,38 @@ class MapBox: MGLMapView{
 }
 
 
-extension MapBox: MGLLocationManagerDelegate {
-
-    func locationManager(_ manager: MGLLocationManager, didUpdate locations: [CLLocation]) {
-        guard let userLocation = locations.last else {return}
-
-        self.showsUserLocation = true
-        self.userTrackingMode = .followWithHeading
-
-
-        //--- Anotation
-        anotaion.coordinate = userLocation.coordinate
-        self.addAnnotation(anotaion)
-
-        //--- Stop update lcation
-        locationManager.stopUpdatingLocation()
-
-        //--- Get curentLocation to  update Camera
-        curentLocation = CLLocation(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
-    }
-
-    func locationManager(_ manager: MGLLocationManager, didUpdate newHeading: CLHeading) {
-
-    }
-
-    func locationManagerShouldDisplayHeadingCalibration(_ manager: MGLLocationManager) -> Bool {
-        return true
-    }
-
-    func locationManager(_ manager: MGLLocationManager, didFailWithError error: Error) {
-        print("Error: \(error.localizedDescription)")
-    }
-}
+//extension MapBox: MGLLocationManagerDelegate {
+//
+//    func locationManager(_ manager: MGLLocationManager, didUpdate locations: [CLLocation]) {
+//        guard let userLocation = locations.last else {return}
+//
+//        self.showsUserLocation = true
+//        self.userTrackingMode = .followWithHeading
+//
+//
+//        //--- Anotation
+//        anotaion.coordinate = userLocation.coordinate
+//        self.addAnnotation(anotaion)
+//
+//        //--- Stop update lcation
+//        locationManager.stopUpdatingLocation()
+//
+//        //--- Get curentLocation to  update Camera
+//        curentLocation = CLLocation(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+//    }
+//
+//    func locationManager(_ manager: MGLLocationManager, didUpdate newHeading: CLHeading) {
+//
+//    }
+//
+//    func locationManagerShouldDisplayHeadingCalibration(_ manager: MGLLocationManager) -> Bool {
+//        return true
+//    }
+//
+//    func locationManager(_ manager: MGLLocationManager, didFailWithError error: Error) {
+//        print("Error: \(error.localizedDescription)")
+//    }
+//}
 
 
 

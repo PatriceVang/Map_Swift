@@ -39,6 +39,8 @@ class GoogleMap: GMSMapView {
         self.isMyLocationEnabled = true
         self.settings.myLocationButton = true
         
+        
+      
     }
     
     required init?(coder: NSCoder) {

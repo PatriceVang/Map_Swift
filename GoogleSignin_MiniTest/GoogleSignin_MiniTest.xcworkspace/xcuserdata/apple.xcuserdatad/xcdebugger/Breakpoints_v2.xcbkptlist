@@ -14,26 +14,10 @@
             filePath = "GoogleSignin_MiniTest/App/Component/Map_GoogleMap.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "setupCamera(coordinate:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6D2CBCD7-10A5-43F9-91BD-B7C79EE8D3E4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "unknown"
-            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -112,6 +96,334 @@
                   offsetFromSymbolStart = "96">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1AE5A2F-D6C5-497F-A746-2F5ADDEB84A4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "HomeVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A1AE5A2F-D6C5-497F-A746-2F5ADDEB84A4 - 2417d9df0a86707c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.googleMap.getter : GoogleSignin_MiniTest.GoogleMap"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "211">
+               </Location>
+               <Location
+                  uuid = "A1AE5A2F-D6C5-497F-A746-2F5ADDEB84A4 - ae56ea339b4aa468"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.googleMap.setter : GoogleSignin_MiniTest.GoogleMap"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "A1AE5A2F-D6C5-497F-A746-2F5ADDEB84A4 - cc74e936c0f01b79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.googleMap.modify : GoogleSignin_MiniTest.GoogleMap"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "A1AE5A2F-D6C5-497F-A746-2F5ADDEB84A4 - eb655bf76cbb2d3f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.googleMap.modify : GoogleSignin_MiniTest.GoogleMap with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "33528E7E-111C-4F8E-9F7F-07F712F6B865"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "HomeVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "33528E7E-111C-4F8E-9F7F-07F712F6B865 - 187e3e26ce7495e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.mapBox.getter : GoogleSignin_MiniTest.MapBox"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "211">
+               </Location>
+               <Location
+                  uuid = "33528E7E-111C-4F8E-9F7F-07F712F6B865 - dea481e92f5ecd1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.mapBox.setter : GoogleSignin_MiniTest.MapBox"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "33528E7E-111C-4F8E-9F7F-07F712F6B865 - b3c2b189658433ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.mapBox.modify : GoogleSignin_MiniTest.MapBox"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "33528E7E-111C-4F8E-9F7F-07F712F6B865 - 7b630e1857ffa10a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.mapBox.modify : GoogleSignin_MiniTest.MapBox with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62AAFA4F-B296-43B8-8808-DDABD0E5FA18"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "HomeVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "62AAFA4F-B296-43B8-8808-DDABD0E5FA18 - f4790818556a7db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.stateMap.getter : Swift.Bool"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  uuid = "62AAFA4F-B296-43B8-8808-DDABD0E5FA18 - 6881e9eb64638fd7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.stateMap.setter : Swift.Bool"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "118">
+               </Location>
+               <Location
+                  uuid = "62AAFA4F-B296-43B8-8808-DDABD0E5FA18 - cd4fc63d6fb681a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.stateMap.modify : Swift.Bool"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "62AAFA4F-B296-43B8-8808-DDABD0E5FA18 - 976b7dd8e760e3d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.stateMap.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "203031AC-B5C6-48A8-BB0D-9A49C3079242"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "HomeVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "203031AC-B5C6-48A8-BB0D-9A49C3079242 - 2417d9df0a86707c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.googleMap.getter : GoogleSignin_MiniTest.GoogleMap"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "211">
+               </Location>
+               <Location
+                  uuid = "203031AC-B5C6-48A8-BB0D-9A49C3079242 - ae56ea339b4aa468"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.googleMap.setter : GoogleSignin_MiniTest.GoogleMap"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "203031AC-B5C6-48A8-BB0D-9A49C3079242 - cc74e936c0f01b79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.googleMap.modify : GoogleSignin_MiniTest.GoogleMap"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "203031AC-B5C6-48A8-BB0D-9A49C3079242 - eb655bf76cbb2d3f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleSignin_MiniTest.HomeVC.googleMap.modify : GoogleSignin_MiniTest.GoogleMap with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "GoogleSignin_MiniTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/Map_Swift/GoogleSignin_MiniTest/GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F469593-7392-47B3-BE16-EA65955D6978"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoogleSignin_MiniTest/App/Screen/Home/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "init(viewModel:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

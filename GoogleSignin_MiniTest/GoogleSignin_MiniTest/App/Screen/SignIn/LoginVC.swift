@@ -36,7 +36,6 @@ class LoginVC: UIViewController {
     }
 }
 
-
 extension LoginVC: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
@@ -47,7 +46,8 @@ extension LoginVC: GIDSignInDelegate {
           }
           return
         } else {
-            self.navigationController?.pushViewController(HomeVC(), animated: true)
+            let factory = ContainerFactory()
+            self.navigationController?.pushViewController(factory.makeHomeVC(), animated: true)
         }
     }
 }

@@ -33,18 +33,44 @@ class SearchVC: UIViewController {
         img.tintColor = .white
         return img
     }()
+
+    
+//    let searchBar: UISearchBar = {
+//       let sb = UISearchBar()
+//        sb.frame = .init(x: 0, y: 0, width: UIScreen.main.bounds.width - 80, height: 35)
+//        sb.searchTextField.backgroundColor = Resource.Color.bgSearchTfColor
+//        sb.searchTextField.textColor = .white
+//        return sb
+//    }()
     
     //--- Tilte of Header
         let titleHeader = ["Categories", "Recent"]
     //--- Use call API
         var locationEndpoint: CLLocation = CLLocation(latitude: 0, longitude: 0)
-
+    var viewModel: SearchViewModel {
+        didSet {
+            
+        }
+    }
+    init(viewModel: SearchViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: "SearchVC", bundle: nil)
+        setupViewModel(viewModel: viewModel)
+    }
+    
+    func setupViewModel(viewModel: SearchViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         customElement()
         myTableV.register(UINib(nibName: "CategoriesCell", bundle: nil), forCellReuseIdentifier: categories)
         myTableV.register(UINib(nibName: "RecentCell", bundle: nil), forCellReuseIdentifier: recent)
-        
     }
     
     //MARK: Custom Element
@@ -56,6 +82,7 @@ class SearchVC: UIViewController {
         
         //--- Search Tf
         self.navigationItem.titleView = search_Tf
+//        self.navigationItem.titleView = searchBar
         
         //--- Back Btn
         back_Btn.addGesture(taget: self, selector: #selector(onTapLeftBtnItem))
@@ -69,7 +96,6 @@ class SearchVC: UIViewController {
 }
 
 extension SearchVC: UITableViewDelegate, UITableViewDataSource {
-    
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         //--- Create Header
@@ -113,17 +139,10 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+//MARK:--- Delegation from Categories Cell
 extension SearchVC: CategoriesCellDelegate {
+    //--- Call API
     func getStationBus() {
-        let lat2 = 106.6352
-        let log2 = 10.7481
-        APICaller.getMethod([Coordinate].self, url: "http://api.openfpt.vn/fbusinfo/businfo/getstopsinbounds/\(locationEndpoint.coordinate.longitude)/\(locationEndpoint.coordinate.latitude)/\(log2)/\(lat2)") { (coor) in
-            DispatchQueue.main.async {
-                print(coor.map{ $0.lat})
-            }
-        }
-        
-        
-      
+        viewModel.fetchData()
     }
 }
