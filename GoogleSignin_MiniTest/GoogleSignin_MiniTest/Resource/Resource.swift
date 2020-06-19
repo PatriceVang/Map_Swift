@@ -10,15 +10,14 @@ import UIKit
 
 
 class Resource {
-    
-    
+   
     //MARK:--- Image
     class Image {
         static let google: UIImage = UIImage(named: "google_img")!
         static let camera: UIImage = UIImage(named: "cameraWhite_img")!
         static let menuSearch: UIImage = UIImage(named: "menuSearch_img")!
         static let stack: UIImage = UIImage(named: "stack_img")!
-        static let maker: UIImage = UIImage(named: "maker")!
+        static let maker: UIImage = UIImage(named: "marker")!
         static let bus: UIImage = UIImage(named: "bus_img")!
     }
     //MARK:--- Color
@@ -27,6 +26,7 @@ class Resource {
         static let naviBarColor: UIColor = #colorLiteral(red: 0.07781187445, green: 0.2245084047, blue: 0.6976864934, alpha: 1)
         static let bgSearchTfColor: UIColor = #colorLiteral(red: 0.06479276717, green: 0.1921555698, blue: 0.5980993509, alpha: 1)
         static let headerCatagoriesColor: UIColor = #colorLiteral(red: 0.944617033, green: 0.9566000104, blue: 0.9772842526, alpha: 1)
+        static let circleLocationColor: UIColor = #colorLiteral(red: 0.8144833446, green: 0.8457677364, blue: 0.9246796966, alpha: 1)
     }
     //MARK:--- Text
     class Text {

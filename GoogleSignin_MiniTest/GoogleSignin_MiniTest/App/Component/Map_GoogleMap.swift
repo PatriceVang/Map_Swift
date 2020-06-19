@@ -10,9 +10,10 @@ import Foundation
 import GoogleMaps
 import GooglePlaces
 
-
 class GoogleMap: GMSMapView {
     var locationManager = CLLocationManager()
+    let marker = GMSMarker()
+    let circleLocation = GMSCircle()
     var isSetupCamera: Bool = true
     var currentLocation: CLLocation? {
         didSet {
@@ -31,16 +32,39 @@ class GoogleMap: GMSMapView {
         locationManager.startUpdatingLocation()
         
         //--- After 30s update location once
-        Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { (Timer) in
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (Timer) in
             self.locationManager.startUpdatingLocation()
         }
         
-        //--- Set up MapView
-        self.isMyLocationEnabled = true
-        self.settings.myLocationButton = true
-        
-        
-      
+        //--- Set up current location MapView
+        delegate = self
+  
+        setupCircleLocation()
+        setupMarker()
+    }
+    
+    func setupMarker() {
+        let marketV = UIView()
+        marketV.backgroundColor = Resource.Color.pickerColor
+        marketV.frame.size = .init(width: 25, height: 25)
+        marketV.addRadius(radius: marketV.frame.height / 2)
+        let markerImg = UIImageView()
+        markerImg.frame.size = .init(width: 20, height: 20)
+        markerImg.center = marketV.center
+        markerImg.contentMode = .scaleAspectFill
+        markerImg.image = Resource.Image.maker
+        marketV.addSubview(markerImg)
+        marker.iconView = marketV
+        marker.isTappable = false
+        marker.map = self
+    }
+    func setupCircleLocation() {
+        circleLocation.radius = 130
+        circleLocation.fillColor = UIColor(white: 0.7, alpha: 0.5)
+        circleLocation.strokeColor = Resource.Color.circleLocationColor
+        DispatchQueue.main.async {
+            self.circleLocation.map = self
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -62,11 +86,12 @@ extension GoogleMap: CLLocationManagerDelegate {
         
         //--- get User's Location
         guard let userLocation = locations.last else {return}
-        self.isMyLocationEnabled = true
-    
-        //--- make Marker
-//        let maker = GMSMarker(position: .init(latitude: (userLocation?.coordinate.latitude)!, longitude: (userLocation?.coordinate.longitude)!))
-//        maker.map = self
+
+        //--- Update position marker
+        marker.position = userLocation.coordinate
+        
+        //--- Circle Location
+        circleLocation.position = userLocation.coordinate
         
         //--- stop update location
         locationManager.stopUpdatingLocation()
@@ -78,6 +103,10 @@ extension GoogleMap: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error: \(error.localizedDescription)")
     }
+}
+
+extension GoogleMap: GMSMapViewDelegate {
+    
 }
 
 

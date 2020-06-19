@@ -28,6 +28,4 @@ extension UIView {
         self.isUserInteractionEnabled = true
         self.addGestureRecognizer(UITapGestureRecognizer(target: taget, action: selector))
     }
-    
-    
 }

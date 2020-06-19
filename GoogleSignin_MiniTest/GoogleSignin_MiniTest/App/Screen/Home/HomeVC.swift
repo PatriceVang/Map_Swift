@@ -105,7 +105,7 @@ class HomeVC: UIViewController{
     @objc func onTapSearchView() {
         let searchVC = factory.makeSearchVC()
         if let currentLocation = googleMap.currentLocation {
-            searchVC.locationEndpoint = currentLocation
+            searchVC.fristLocation = currentLocation
         }
         self.navigationController?.pushViewController(searchVC, animated: true)
     }

@@ -9,8 +9,6 @@
 import UIKit
 
 class ProfileTableVC: UITableViewController {
-    //--- Tranport event use Google Map for HomeVC to displayed
-//    var useGoogleMap: ((Bool) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +26,7 @@ class ProfileTableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! OptionCell
-//        cell.delegate = self
         return cell
     }
 }
 
-//extension ProfileTableVC: OptionCellDelegate {
-//    func didUsedGoogleMap(did: Bool) {
-//        useGoogleMap!(did)
-//    }
-//}

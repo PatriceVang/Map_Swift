@@ -33,25 +33,14 @@ class SearchVC: UIViewController {
         img.tintColor = .white
         return img
     }()
-
-    
-//    let searchBar: UISearchBar = {
-//       let sb = UISearchBar()
-//        sb.frame = .init(x: 0, y: 0, width: UIScreen.main.bounds.width - 80, height: 35)
-//        sb.searchTextField.backgroundColor = Resource.Color.bgSearchTfColor
-//        sb.searchTextField.textColor = .white
-//        return sb
-//    }()
     
     //--- Tilte of Header
-        let titleHeader = ["Categories", "Recent"]
-    //--- Use call API
-        var locationEndpoint: CLLocation = CLLocation(latitude: 0, longitude: 0)
-    var viewModel: SearchViewModel {
-        didSet {
-            
-        }
-    }
+    let titleHeader = ["Categories", "Recent"]
+    //--- Use Call API
+    var fristLocation: CLLocation = CLLocation(latitude: 0, longitude: 0)
+    //--- View Model
+    var viewModel: SearchViewModel 
+
     init(viewModel: SearchViewModel) {
         self.viewModel = viewModel
         super.init(nibName: "SearchVC", bundle: nil)
@@ -82,7 +71,6 @@ class SearchVC: UIViewController {
         
         //--- Search Tf
         self.navigationItem.titleView = search_Tf
-//        self.navigationItem.titleView = searchBar
         
         //--- Back Btn
         back_Btn.addGesture(taget: self, selector: #selector(onTapLeftBtnItem))
@@ -142,7 +130,7 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
 //MARK:--- Delegation from Categories Cell
 extension SearchVC: CategoriesCellDelegate {
     //--- Call API
-    func getStationBus() {
-        viewModel.fetchData()
+    func getStationsBus() {
+        viewModel.fetchData(currentLocation: fristLocation)
     }
 }

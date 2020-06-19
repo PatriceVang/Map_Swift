@@ -20,8 +20,6 @@ class CategoriesCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         customElement()
-
-        
     }
     
     //MARK:--- Custom Element
@@ -32,10 +30,10 @@ class CategoriesCell: UITableViewCell {
     
     //MARK:--- Handle Event
     @objc func onTapBusBtn() {
-        delegate?.getStationBus()
+        delegate?.getStationsBus()
     }
 }
 
 protocol CategoriesCellDelegate: class {
-    func getStationBus()
+    func getStationsBus()
 }

@@ -8,11 +8,11 @@
 
 import Foundation
 import Mapbox
+import CoreLocation
 
 
 class MapBox: MGLMapView{
     var isSetupCamera: Bool = true
-    let anotaion = MGLPointAnnotation()
     var curentLocation: CLLocation? {
         didSet {
             if let currentLocation = curentLocation, isSetupCamera == true {
@@ -26,6 +26,8 @@ class MapBox: MGLMapView{
         //--- Style Map
         let url = URL(string: "mapbox://styles/mapbox/streets-v11")
         self.styleURL = url
+        
+//        delegate = self
         
         
         //--- Location Manger
@@ -90,6 +92,10 @@ class MapBox: MGLMapView{
 //    }
 //}
 
+
+//extension MapBox: MGLMapViewDelegate {
+//
+//}
 
 
 
