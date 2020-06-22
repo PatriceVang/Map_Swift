@@ -11,6 +11,7 @@ pod 'Mapbox-iOS-SDK'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
 pod 'Alamofire'
+pod 'RealmSwift'
 
 
 end

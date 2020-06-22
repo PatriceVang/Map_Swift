@@ -11,17 +11,21 @@ import CoreLocation
 
 
 class SearchViewModel {
-//    var firstLocation = Observable<CLLocation>(value: .init(latitude: 0, longitude: 0))
     
     init() {}
+    
+    
     //--- Call API
-    func fetchData(currentLocation: CLLocation) {
-        let lat2 = 106.6352
-        let log2 = 10.7481
-        APICaller.getMethod([Coordinate].self, url: "http://api.openfpt.vn/fbusinfo/businfo/getstopsinbounds/\(currentLocation.coordinate.longitude)/\(currentLocation.coordinate.latitude)/\(lat2)/\(log2)") { (coor) in
-            DispatchQueue.main.async {
-                print(coor.map{ $0.lat})
+    func fetchDataPOI(currentLocation: CLLocation, text: TypePOI) {
+        APICaller.getMethod(ResultJson.self, url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(currentLocation.coordinate.latitude),\(currentLocation.coordinate.longitude)&radius=3000&type=\(text.rawValue)&keyword=cruise&key=AIzaSyDzZ2ixVoy_vDGRrc52Axw45YifTu0qvQQ") { resultJson,err  in
+            if err != nil {
+                print(err?.localizedDescription as Any)
+            } else {
+                let dataLocation: [AnyHashable: Any]? = ["markerPOI": resultJson?.results?.compactMap {$0.geometry?.location} as Any,
+                                                         "markerType": "\(text.rawValue)"]
+                NotificationCenter.default.post(name: .markerPOI, object: nil, userInfo: dataLocation)
             }
         }
     }
 }
+

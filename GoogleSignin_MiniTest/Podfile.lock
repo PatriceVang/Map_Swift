@@ -27,6 +27,11 @@ PODS:
   - Mapbox-iOS-SDK (5.9.0):
     - MapboxMobileEvents (= 0.10.2)
   - MapboxMobileEvents (0.10.2)
+  - Realm (5.0.3):
+    - Realm/Headers (= 5.0.3)
+  - Realm/Headers (5.0.3)
+  - RealmSwift (5.0.3):
+    - Realm (= 5.0.3)
 
 DEPENDENCIES:
   - Alamofire
@@ -34,6 +39,7 @@ DEPENDENCIES:
   - GooglePlaces
   - GoogleSignIn
   - Mapbox-iOS-SDK
+  - RealmSwift
 
 SPEC REPOS:
   trunk:
@@ -46,6 +52,8 @@ SPEC REPOS:
     - GTMSessionFetcher
     - Mapbox-iOS-SDK
     - MapboxMobileEvents
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
@@ -57,7 +65,9 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
   Mapbox-iOS-SDK: a5915700ec84bc1a7f8b3e746d474789e35b7956
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
+  Realm: bfca1699b61b0b17c3a69ae0e648314eae91fbdb
+  RealmSwift: 493c9f089cd3893b3959007973c0e4f640906ba0
 
-PODFILE CHECKSUM: ff4cd3bf481580d7c117a8c77904a94326559baf
+PODFILE CHECKSUM: 9e4b51aa86d00ee1c938cd6b1e716d40bfeefc18
 
 COCOAPODS: 1.9.1

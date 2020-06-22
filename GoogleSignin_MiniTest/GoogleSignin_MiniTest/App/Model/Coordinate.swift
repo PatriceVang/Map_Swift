@@ -7,17 +7,38 @@
 //
 
 import Foundation
+import CoreLocation
 
 
-struct Coordinate: Codable {
-    var name: String?
-    var lat: Double?
-    var long: Double?
-    
-    enum CodingKeys: String, CodingKey {
-        case name = "Name"
-        case lat = "Lat"
-        case long = "Lng"
-    }
-    
+//--- Use POI
+struct ResultJson: Codable {
+    var results: [Result]?
 }
+
+struct Result: Codable {
+    var geometry: Geometry?
+}
+
+struct Geometry: Codable {
+    var location: Location?
+}
+
+struct Location: Codable {
+    var lat: Double?
+    var lng: Double?
+
+}
+///
+
+//struct Coordinate: Codable {
+//    var name: String?
+//    var lat: Double?
+//    var long: Double?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case name = "name"
+//        case lat = "lat"
+//        case long = "Lng"
+//    }
+//
+//}

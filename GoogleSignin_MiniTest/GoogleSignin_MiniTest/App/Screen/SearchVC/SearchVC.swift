@@ -9,6 +9,8 @@
 import UIKit
 import CoreLocation
 
+
+
 private let categories = "categories"
 private let recent = "recent"
 
@@ -37,7 +39,7 @@ class SearchVC: UIViewController {
     //--- Tilte of Header
     let titleHeader = ["Categories", "Recent"]
     //--- Use Call API
-    var fristLocation: CLLocation = CLLocation(latitude: 0, longitude: 0)
+    var currentLocation: CLLocation = CLLocation(latitude: 0, longitude: 0)
     //--- View Model
     var viewModel: SearchViewModel 
 
@@ -129,8 +131,7 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
 
 //MARK:--- Delegation from Categories Cell
 extension SearchVC: CategoriesCellDelegate {
-    //--- Call API
-    func getStationsBus() {
-        viewModel.fetchData(currentLocation: fristLocation)
+    func getPlacePOI(type: TypePOI) {
+        viewModel.fetchDataPOI(currentLocation: currentLocation, text: type)
     }
 }

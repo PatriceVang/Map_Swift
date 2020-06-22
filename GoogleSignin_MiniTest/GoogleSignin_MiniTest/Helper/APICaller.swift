@@ -15,25 +15,14 @@ import Alamofire
 class APICaller {
     
     
-    static func getMethod<T: Codable>(_ : T.Type, url: String, completion: @escaping (T) -> Void) {
-        let header: HTTPHeaders = [
-            "api_key": "t6q3AIjL6NQdwZk732qdAIXl87Y4B7BX"
-        ]
-
-//        DispatchQueue.global(qos: .utility).async {
-            //        AF.request(url, method: .get).responseDecodable(of: T.self) { (response) in
-            //            switch response.result {
-            //            case .success(let result):
-            //                completion(result)
-            //            case .failure(let err):
-            //                print(err.localizedDescription)
-            //            }
-            //        }
-//        }
-
-        DispatchQueue.global(qos: .utility).async {
-            AF.request(url, method: .get, headers: header).responseJSON { (response) in
-                print(response.value as Any)
+    static func getMethod<T: Codable>(_ : T.Type, url: String, completion: @escaping (T?, AFError?) -> Void) {
+        AF.request(url, method: .get).responseDecodable(of: T.self) { (response) in
+            switch response.result {
+            case .success:
+                guard let jsonDeco = response.value else {return}
+                completion(jsonDeco, nil)
+            case .failure(let err):
+                completion(nil, err)
             }
         }
     }

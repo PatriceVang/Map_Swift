@@ -8,6 +8,7 @@
 
 import UIKit
 import Mapbox
+import GoogleMaps
 
 class HomeVC: UIViewController{
     @IBOutlet weak var map_View: UIView!
@@ -19,6 +20,7 @@ class HomeVC: UIViewController{
     var passCurrentLocation: ((CLLocation) -> Void)?
     //--- Use NotificationCenter
     var switchMapSubcription: NSObjectProtocol?
+   
     //--- Factory
     var factory = ContainerFactory()
     //--- Create Map
@@ -36,6 +38,7 @@ class HomeVC: UIViewController{
                     self.map_View.addSubview(self.googleMap)
                 } else {
                     self.mapBox.reloadCamera()
+                    self.googleMap.clear()
                     self.googleMap.removeFromSuperview()
                     self.map_View.addSubview(self.mapBox)
                 }
@@ -71,6 +74,7 @@ class HomeVC: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+        
     }
 
     //MARK:--- CustomElement
@@ -105,7 +109,7 @@ class HomeVC: UIViewController{
     @objc func onTapSearchView() {
         let searchVC = factory.makeSearchVC()
         if let currentLocation = googleMap.currentLocation {
-            searchVC.fristLocation = currentLocation
+            searchVC.currentLocation = currentLocation
         }
         self.navigationController?.pushViewController(searchVC, animated: true)
     }

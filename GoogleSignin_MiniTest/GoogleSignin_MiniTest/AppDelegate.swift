@@ -25,8 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GIDSignIn.sharedInstance().clientID = "339883821140-2hp2k5cpsr35hr8hc26430b0n3qc672g.apps.googleusercontent.com"
         
         //--- API GoogleMap
-        GMSServices.provideAPIKey("AIzaSyDCVVFZnx8eRESiWe2N5pjtuMBOl7ZJBM0")
-        GMSPlacesClient.provideAPIKey("AIzaSyDCVVFZnx8eRESiWe2N5pjtuMBOl7ZJBM0")
+        GMSServices.provideAPIKey("AIzaSyDzZ2ixVoy_vDGRrc52Axw45YifTu0qvQQ")
+        GMSPlacesClient.provideAPIKey("AIzaSyDzZ2ixVoy_vDGRrc52Axw45YifTu0qvQQ")
         return true
     }
 

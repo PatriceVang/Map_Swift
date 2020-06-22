@@ -8,8 +8,20 @@
 
 import UIKit
 
+enum TypePOI: String {
+    case cafe = "cafe"
+    case hotel = "hotel"
+    case restaurant = "restaurant"
+    case bus = "bus"
+}
+
 class CategoriesCell: UITableViewCell {
-    @IBOutlet weak var bus_Btn: UIImageView!
+    @IBOutlet weak var bus_Btn: UIView!
+    @IBOutlet weak var coffee_Btn: UIView!
+    @IBOutlet weak var hotel_Btn: UIView!
+    @IBOutlet weak var restaurant_Btn: UIView!
+    @IBOutlet weak var more_Btn: UIView!
+    @IBOutlet var arrPOI_Btn: [UIView]!
     weak var delegate: CategoriesCellDelegate?
     
     override func awakeFromNib() {
@@ -26,14 +38,34 @@ class CategoriesCell: UITableViewCell {
     private func customElement() {
         //--- Bus Btn
         bus_Btn.addGesture(taget: self, selector: #selector(onTapBusBtn))
+        //--- Coffee Btn
+        coffee_Btn.addGesture(taget: self, selector: #selector(onTapCoffeeBtn))
+        //--- Hotel Btn
+        hotel_Btn.addGesture(taget: self, selector: #selector(onTapHotelBtn))
+        //--- Restaurant Btn
+        restaurant_Btn.addGesture(taget: self, selector: #selector(onTapRestaurantBtn))
+        //--- More Btn
+        more_Btn.addGesture(taget: self, selector: #selector(onTapMoreBtn))
     }
     
     //MARK:--- Handle Event
     @objc func onTapBusBtn() {
-        delegate?.getStationsBus()
+        delegate?.getPlacePOI(type: .bus)
+    }
+    @objc func onTapCoffeeBtn() {
+        delegate?.getPlacePOI(type: .cafe)
+    }
+    @objc func onTapHotelBtn() {
+        delegate?.getPlacePOI(type: .hotel)
+    }
+    @objc func onTapRestaurantBtn() {
+        delegate?.getPlacePOI(type: .restaurant)
+    }
+    @objc func onTapMoreBtn() {
+        print("more")
     }
 }
 
 protocol CategoriesCellDelegate: class {
-    func getStationsBus()
+    func getPlacePOI(type: TypePOI)
 }

@@ -19,6 +19,9 @@ class Resource {
         static let stack: UIImage = UIImage(named: "stack_img")!
         static let maker: UIImage = UIImage(named: "marker")!
         static let bus: UIImage = UIImage(named: "bus_img")!
+        static let cafe: UIImage = UIImage(named: "cafe_img")!
+        static let hotel: UIImage = UIImage(named: "hotel_img")!
+        static let restaurant: UIImage = UIImage(named: "restaurant_img")!
     }
     //MARK:--- Color
     class Color {

@@ -11,4 +11,5 @@ import Foundation
 
 extension NSNotification.Name {
     static var switchMap = NSNotification.Name("switchMap")
+    static var markerPOI = NSNotification.Name("markerPOI")
 }
