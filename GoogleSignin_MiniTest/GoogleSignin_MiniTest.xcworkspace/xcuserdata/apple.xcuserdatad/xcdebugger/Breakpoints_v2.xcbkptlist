@@ -14,8 +14,8 @@
             filePath = "GoogleSignin_MiniTest/App/Component/Map_GoogleMap.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "setupCamera(coordinate:)"
             landmarkType = "7">
          </BreakpointContent>

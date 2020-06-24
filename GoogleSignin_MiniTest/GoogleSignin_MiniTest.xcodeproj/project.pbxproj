@@ -149,6 +149,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1870684924A1A575000AA87C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		1872CFF8249323480044EDED /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +279,7 @@
 		18D46EFD248F4C7500D020E6 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				1870684924A1A575000AA87C /* Categories */,
 				186C15C72498813B00EDDB23 /* SearchVC */,
 				18D46EED248F38E500D020E6 /* SignIn */,
 				1872CFF8249323480044EDED /* Home */,

@@ -8,10 +8,11 @@
 
 import UIKit
 import CoreLocation
+import RealmSwift
 
 
 
-private let categories = "categories"
+private let category = "categories"
 private let recent = "recent"
 
 class SearchVC: UIViewController {
@@ -35,6 +36,14 @@ class SearchVC: UIViewController {
         img.tintColor = .white
         return img
     }()
+    
+    //--- Realm Db
+    let realm = try! Realm()
+    lazy var categories: Results<Category> = {
+        self.realm.objects(Category.self)
+    }()
+    var selectedCategory: Category!
+    
     
     //--- Tilte of Header
     let titleHeader = ["Categories", "Recent"]
@@ -60,8 +69,12 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customElement()
-        myTableV.register(UINib(nibName: "CategoriesCell", bundle: nil), forCellReuseIdentifier: categories)
+        myTableV.register(UINib(nibName: "CategoriesCell", bundle: nil), forCellReuseIdentifier: category)
         myTableV.register(UINib(nibName: "RecentCell", bundle: nil), forCellReuseIdentifier: recent)
+        
+        //---Realm
+        pooulateDefautCatarogies()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
     //MARK: Custom Element
@@ -78,10 +91,22 @@ class SearchVC: UIViewController {
         back_Btn.addGesture(taget: self, selector: #selector(onTapLeftBtnItem))
     }
     
-    
     //MARK:--- Handle Event
     @objc func onTapLeftBtnItem() {
         self.navigationController?.popViewController(animated: true)
+    }
+    //---Realm
+    private func pooulateDefautCatarogies() {
+        if categories.count == 0 {
+            try! realm.write({
+                let defaultCategories = ["Birds", "Mammals", "Flora", "Reptiles", "Arachnids", "123" ]
+                defaultCategories.map {
+                    let newCategories = Category()
+                    newCategories.name = $0
+                    realm.add(newCategories)
+                }
+            })
+        }
     }
 }
 
@@ -110,16 +135,18 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         if section == 0 {
             return 1
         }
-        return 2
+        return categories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = myTableV.dequeueReusableCell(withIdentifier: categories) as! CategoriesCell
+            let cell = myTableV.dequeueReusableCell(withIdentifier: category) as! CategoriesCell
             cell.delegate = self
             return cell
         } else {
+            //--- Realm
             let cell = myTableV.dequeueReusableCell(withIdentifier: recent) as! RecentCell
+            cell.textLabel?.text = categories[indexPath.row].name
             return cell
         }
     }
@@ -132,6 +159,6 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
 //MARK:--- Delegation from Categories Cell
 extension SearchVC: CategoriesCellDelegate {
     func getPlacePOI(type: TypePOI) {
-        viewModel.fetchDataPOI(currentLocation: currentLocation, text: type)
+        viewModel.fetchDataPOI(currentLocation: currentLocation, text: type.rawValue)
     }
 }

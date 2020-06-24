@@ -10,7 +10,7 @@ import UIKit
 
 enum TypePOI: String {
     case cafe = "cafe"
-    case hotel = "hotel"
+    case hotel = "hotels"
     case restaurant = "restaurant"
     case bus = "bus"
 }

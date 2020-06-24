@@ -64,7 +64,6 @@ class GoogleMap: GMSMapView {
         NotificationCenter.default.removeObserver(markerPoiSubcription as Any, name: .markerPOI, object: nil)
     }
 
-    
     func setupMarketPOI() {
         markerPoiSubcription = NotificationCenter.default.addObserver(forName: .markerPOI, object: nil, queue: .main) { [weak self] (notification) in
             guard let self = self else {return}
@@ -72,7 +71,7 @@ class GoogleMap: GMSMapView {
             if let userInfo = notification.userInfo as? [String: Any],
                 let location = userInfo["markerPOI"] as? [Location], let markerType = userInfo["markerType"] as? String {
                 location.map { loc in
-                    let marker = GMSMarker()
+                    let markerPOI = GMSMarker()
                     let markerV = UIView()
                     markerV.frame.size = .init(width: 25, height: 25)
                     let markerImg = UIImageView()
@@ -91,9 +90,9 @@ class GoogleMap: GMSMapView {
                     }
                     markerV.addSubview(markerImg)
                     
-                    marker.iconView = markerV
-                    marker.position = CLLocationCoordinate2D(latitude: (loc.lat?.convertDegree())!, longitude: (loc.lng?.convertDegree())!)
-                    marker.map = self
+                    markerPOI.iconView = markerV
+                    markerPOI.position = CLLocationCoordinate2D(latitude: (loc.lat?.convertDegree())!, longitude: (loc.lng?.convertDegree())!)
+                    markerPOI.map = self
                 }
                 if let curentLocation = self.currentLocation {
                     self.camera = GMSCameraPosition.camera(withLatitude: curentLocation.coordinate.latitude, longitude: curentLocation.coordinate.longitude, zoom: 12)
