@@ -22,6 +22,8 @@ class Resource {
         static let cafe: UIImage = UIImage(named: "cafe_img")!
         static let hotel: UIImage = UIImage(named: "hotel_img")!
         static let restaurant: UIImage = UIImage(named: "restaurant_img")!
+        static let normalMarker: UIImage = UIImage(named: "normalMarker_img")!
+        static let iconMarker: UIImage = UIImage(named: "iconMarker_img")!
     }
     //MARK:--- Color
     class Color {

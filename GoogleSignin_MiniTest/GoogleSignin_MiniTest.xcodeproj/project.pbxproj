@@ -12,6 +12,8 @@
 		1854A14B249B2321000C317B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854A14A249B2321000C317B /* Observable.swift */; };
 		1854A14D249B2659000C317B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854A14C249B2659000C317B /* HomeViewModel.swift */; };
 		1854A14F249B464A000C317B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1854A14E249B464A000C317B /* SearchViewModel.swift */; };
+		18594D6E24A98FC500933354 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18594D6D24A98FC500933354 /* UIViewController + Extension.swift */; };
+		18594D7024A9A3CC00933354 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18594D6F24A9A3CC00933354 /* Validate.swift */; };
 		186C15CA2498816100EDDB23 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C15C82498816100EDDB23 /* SearchVC.swift */; };
 		186C15CB2498816100EDDB23 /* SearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186C15C92498816100EDDB23 /* SearchVC.xib */; };
 		186C15D42498AC8C00EDDB23 /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C15D22498AC8C00EDDB23 /* RecentCell.swift */; };
@@ -48,6 +50,8 @@
 		1854A14A249B2321000C317B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		1854A14C249B2659000C317B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1854A14E249B464A000C317B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		18594D6D24A98FC500933354 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		18594D6F24A9A3CC00933354 /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		186C15C82498816100EDDB23 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		186C15C92498816100EDDB23 /* SearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchVC.xib; sourceTree = "<group>"; };
 		186C15D22498AC8C00EDDB23 /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
@@ -166,13 +170,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		1872CFFD24932B410044EDED /* Component */ = {
+		1872CFFD24932B410044EDED /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				1872CFFE24932B520044EDED /* Map_MapBox.swift */,
 				1872D00024932B5E0044EDED /* Map_GoogleMap.swift */,
 			);
-			path = Component;
+			path = Map;
 			sourceTree = "<group>";
 		};
 		1872D00224932C4B0044EDED /* Profile */ = {
@@ -243,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				186C15DE2498C3C700EDDB23 /* Model */,
-				1872CFFD24932B410044EDED /* Component */,
+				1872CFFD24932B410044EDED /* Map */,
 				18D46EFD248F4C7500D020E6 /* Screen */,
 			);
 			path = App;
@@ -262,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				18D46EF7248F455900D020E6 /* Resource.swift */,
+				18594D6F24A9A3CC00933354 /* Validate.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 				18D46EFA248F48C700D020E6 /* UIView + Extension.swift */,
 				1854A148249AFE06000C317B /* NotificationCenter + Extension.swift */,
 				184DADCE24A09555007783ED /* ConvertType + Extension.swift */,
+				18594D6D24A98FC500933354 /* UIViewController + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -446,6 +452,7 @@
 				1872D00E24932D700044EDED /* Factory.swift in Sources */,
 				186C15D42498AC8C00EDDB23 /* RecentCell.swift in Sources */,
 				18D46EDB248F359D00D020E6 /* SceneDelegate.swift in Sources */,
+				18594D6E24A98FC500933354 /* UIViewController + Extension.swift in Sources */,
 				18D46EFB248F48C700D020E6 /* UIView + Extension.swift in Sources */,
 				186C15DD2498B9A200EDDB23 /* APICaller.swift in Sources */,
 				1872CFFB249323620044EDED /* HomeVC.swift in Sources */,
@@ -453,6 +460,7 @@
 				186C15E02498C3E300EDDB23 /* Coordinate.swift in Sources */,
 				1872D00524932C6E0044EDED /* ProfileTableVC.swift in Sources */,
 				18D46EF1248F390D00D020E6 /* LoginVC.swift in Sources */,
+				18594D7024A9A3CC00933354 /* Validate.swift in Sources */,
 				1854A14F249B464A000C317B /* SearchViewModel.swift in Sources */,
 				1854A149249AFE06000C317B /* NotificationCenter + Extension.swift in Sources */,
 				1872CFFF24932B520044EDED /* Map_MapBox.swift in Sources */,

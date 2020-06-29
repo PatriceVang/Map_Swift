@@ -69,30 +69,9 @@ class GoogleMap: GMSMapView {
             guard let self = self else {return}
             self.clear()
             if let userInfo = notification.userInfo as? [String: Any],
-                let location = userInfo["markerPOI"] as? [Location], let markerType = userInfo["markerType"] as? String {
+                let location = userInfo["markerPOI"] as? [Location], let typeOFMarker = userInfo["markerType"] as? String {
                 location.map { loc in
-                    let markerPOI = GMSMarker()
-                    let markerV = UIView()
-                    markerV.frame.size = .init(width: 25, height: 25)
-                    let markerImg = UIImageView()
-                    markerImg.frame = markerV.bounds
-                    switch markerType {
-                    case TypePOI.bus.rawValue:
-                        markerImg.image = Resource.Image.bus
-                    case TypePOI.cafe.rawValue:
-                        markerImg.image = Resource.Image.cafe
-                    case TypePOI.hotel.rawValue:
-                        markerImg.image = Resource.Image.hotel
-                    case TypePOI.restaurant.rawValue:
-                        markerImg.image = Resource.Image.restaurant
-                    default:
-                        break
-                    }
-                    markerV.addSubview(markerImg)
-                    
-                    markerPOI.iconView = markerV
-                    markerPOI.position = CLLocationCoordinate2D(latitude: (loc.lat?.convertDegree())!, longitude: (loc.lng?.convertDegree())!)
-                    markerPOI.map = self
+                    self.drawMakerProperWhenSearch(type: typeOFMarker, location: CLLocationCoordinate2D(latitude: (loc.lat?.convertDegree())!, longitude: (loc.lng?.convertDegree())!))
                 }
                 if let curentLocation = self.currentLocation {
                     self.camera = GMSCameraPosition.camera(withLatitude: curentLocation.coordinate.latitude, longitude: curentLocation.coordinate.longitude, zoom: 12)
@@ -100,6 +79,34 @@ class GoogleMap: GMSMapView {
             }
         }
     }
+    
+    private func drawMakerProperWhenSearch(type: String, location: CLLocationCoordinate2D) {
+        let markerPOI = GMSMarker()
+        let markerV = UIView()
+        markerV.frame.size = .init(width: 25, height: 25)
+        let markerImg = UIImageView()
+        markerImg.frame = markerV.bounds
+        
+        switch type {
+        case TypeOfPOI.bus.rawValue:
+            markerImg.image = Resource.Image.bus
+        case TypeOfPOI.cafe.rawValue:
+            markerImg.image = Resource.Image.cafe
+        case TypeOfPOI.hotel.rawValue:
+            markerImg.image = Resource.Image.hotel
+        case TypeOfPOI.restaurant.rawValue:
+            markerImg.image = Resource.Image.restaurant
+        default:
+            markerImg.image = Resource.Image.normalMarker
+        }
+        markerV.addSubview(markerImg)
+        markerPOI.iconView = markerV
+        markerPOI.position = location
+        markerPOI.map = self
+    }
+    
+    
+    
     
 //    func setupMarker() {
 //        let marketV = UIView()

@@ -11,9 +11,8 @@ import CoreLocation
 import RealmSwift
 
 
-
-private let category = "categories"
-private let recent = "recent"
+private let categoryId = "categories"
+private let recentId = "recent"
 
 class SearchVC: UIViewController {
     @IBOutlet weak var myTableV: UITableView!
@@ -50,18 +49,12 @@ class SearchVC: UIViewController {
     //--- Use Call API
     var currentLocation: CLLocation = CLLocation(latitude: 0, longitude: 0)
     //--- View Model
-    var viewModel: SearchViewModel 
+    var viewModel: SearchViewModel
 
     init(viewModel: SearchViewModel) {
         self.viewModel = viewModel
         super.init(nibName: "SearchVC", bundle: nil)
-        setupViewModel(viewModel: viewModel)
     }
-    
-    func setupViewModel(viewModel: SearchViewModel) {
-        self.viewModel = viewModel
-    }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -69,8 +62,11 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customElement()
-        myTableV.register(UINib(nibName: "CategoriesCell", bundle: nil), forCellReuseIdentifier: category)
-        myTableV.register(UINib(nibName: "RecentCell", bundle: nil), forCellReuseIdentifier: recent)
+        //--- Dismiss keyboard
+        self.dismissKeyBoard()
+        
+        myTableV.register(UINib(nibName: "CategoriesCell", bundle: nil), forCellReuseIdentifier: categoryId)
+        myTableV.register(UINib(nibName: "RecentCell", bundle: nil), forCellReuseIdentifier: recentId)
         
         //---Realm
         pooulateDefautCatarogies()
@@ -86,6 +82,8 @@ class SearchVC: UIViewController {
         
         //--- Search Tf
         self.navigationItem.titleView = search_Tf
+        search_Tf.delegate = self
+        search_Tf.returnKeyType = .done
         
         //--- Back Btn
         back_Btn.addGesture(taget: self, selector: #selector(onTapLeftBtnItem))
@@ -107,6 +105,17 @@ class SearchVC: UIViewController {
                 }
             })
         }
+    }
+}
+
+extension SearchVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text {
+            viewModel.fetchDataPOI(currentLocation: currentLocation, text: Validate.isValidateTypeOfText(text: text))
+            print(Validate.isValidateTypeOfText(text: text))
+        }
+        self.navigationController?.popViewController(animated: true)
+        return true
     }
 }
 
@@ -140,13 +149,13 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = myTableV.dequeueReusableCell(withIdentifier: category) as! CategoriesCell
+            let cell = myTableV.dequeueReusableCell(withIdentifier: categoryId) as! CategoriesCell
             cell.delegate = self
             return cell
         } else {
             //--- Realm
-            let cell = myTableV.dequeueReusableCell(withIdentifier: recent) as! RecentCell
-            cell.textLabel?.text = categories[indexPath.row].name
+            let cell = myTableV.dequeueReusableCell(withIdentifier: recentId) as! RecentCell
+            cell.name_Lb.text = categories[indexPath.row].name
             return cell
         }
     }
@@ -158,7 +167,7 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
 
 //MARK:--- Delegation from Categories Cell
 extension SearchVC: CategoriesCellDelegate {
-    func getPlacePOI(type: TypePOI) {
+    func getPlacePOI(type: TypeOfPOI) {
         viewModel.fetchDataPOI(currentLocation: currentLocation, text: type.rawValue)
     }
 }

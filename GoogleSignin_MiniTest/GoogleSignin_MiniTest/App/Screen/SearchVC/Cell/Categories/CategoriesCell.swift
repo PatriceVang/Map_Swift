@@ -8,11 +8,11 @@
 
 import UIKit
 
-enum TypePOI: String {
+enum TypeOfPOI: String {
     case cafe = "cafe"
     case hotel = "hotels"
     case restaurant = "restaurant"
-    case bus = "bus"
+    case bus = "bus_station"
 }
 
 class CategoriesCell: UITableViewCell {
@@ -67,5 +67,5 @@ class CategoriesCell: UITableViewCell {
 }
 
 protocol CategoriesCellDelegate: class {
-    func getPlacePOI(type: TypePOI)
+    func getPlacePOI(type: TypeOfPOI)
 }

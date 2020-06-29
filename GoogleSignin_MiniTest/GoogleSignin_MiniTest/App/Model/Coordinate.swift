@@ -17,6 +17,8 @@ struct ResultJson: Codable {
 
 struct Result: Codable {
     var geometry: Geometry?
+    var name: String?
+    var rating: Double?
 }
 
 struct Geometry: Codable {
