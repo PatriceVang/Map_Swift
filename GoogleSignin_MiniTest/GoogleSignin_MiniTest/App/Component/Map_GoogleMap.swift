@@ -63,13 +63,25 @@ class GoogleMap: GMSMapView {
         //--- Remove observer
         NotificationCenter.default.removeObserver(markerPoiSubcription as Any, name: .markerPOI, object: nil)
     }
-
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func reloadView() {
+        isSetupCamera = true
+    }
+    private func setupCamera(coordinate: CLLocation) {
+        self.camera = GMSCameraPosition.camera(withTarget: CLLocationCoordinate2D(latitude: coordinate.coordinate.latitude, longitude: coordinate.coordinate.longitude), zoom: 15)
+        self.isSetupCamera = false
+    }
+    
+    //MARK:--- Handle Event
     func setupMarketPOI() {
         markerPoiSubcription = NotificationCenter.default.addObserver(forName: .markerPOI, object: nil, queue: .main) { [weak self] (notification) in
             guard let self = self else {return}
             self.clear()
             if let userInfo = notification.userInfo as? [String: Any],
-                let location = userInfo["markerPOI"] as? [Location], let typeOFMarker = userInfo["markerType"] as? String {
+                let location = userInfo["markerPOI"] as? [Coordinate], let typeOFMarker = userInfo["markerType"] as? String {
                 location.map { loc in
                     self.drawMakerProperWhenSearch(type: typeOFMarker, location: CLLocationCoordinate2D(latitude: (loc.lat?.convertDegree())!, longitude: (loc.lng?.convertDegree())!))
                 }
@@ -162,17 +174,9 @@ class GoogleMap: GMSMapView {
 //        }
 //    }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
-    func reloadView() {
-        isSetupCamera = true
-    }
-    private func setupCamera(coordinate: CLLocation) {
-        self.camera = GMSCameraPosition.camera(withTarget: CLLocationCoordinate2D(latitude: coordinate.coordinate.latitude, longitude: coordinate.coordinate.longitude), zoom: 15)
-        self.isSetupCamera = false
-    }
+    
+    
 }
 
 extension GoogleMap: CLLocationManagerDelegate {

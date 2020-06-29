@@ -32,7 +32,7 @@
 		1872D00B24932C8D0044EDED /* OptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1872D00924932C8D0044EDED /* OptionCell.xib */; };
 		1872D00E24932D700044EDED /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1872D00D24932D700044EDED /* Factory.swift */; };
 		1872D01024932F0C0044EDED /* UserDefaultHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1872D00F24932F0C0044EDED /* UserDefaultHelpers.swift */; };
-		18AC622C249FBF3C009C7DE1 /* Specimen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC622B249FBF3C009C7DE1 /* Specimen.swift */; };
+		18AC622C249FBF3C009C7DE1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AC622B249FBF3C009C7DE1 /* Category.swift */; };
 		18D46ED9248F359D00D020E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D46ED8248F359D00D020E6 /* AppDelegate.swift */; };
 		18D46EDB248F359D00D020E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D46EDA248F359D00D020E6 /* SceneDelegate.swift */; };
 		18D46EE2248F359D00D020E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D46EE1248F359D00D020E6 /* Assets.xcassets */; };
@@ -70,7 +70,7 @@
 		1872D00924932C8D0044EDED /* OptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionCell.xib; sourceTree = "<group>"; };
 		1872D00D24932D700044EDED /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		1872D00F24932F0C0044EDED /* UserDefaultHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelpers.swift; sourceTree = "<group>"; };
-		18AC622B249FBF3C009C7DE1 /* Specimen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specimen.swift; sourceTree = "<group>"; };
+		18AC622B249FBF3C009C7DE1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		18D46ED5248F359D00D020E6 /* GoogleSignin_MiniTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleSignin_MiniTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D46ED8248F359D00D020E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18D46EDA248F359D00D020E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				186C15DF2498C3E300EDDB23 /* Coordinate.swift */,
-				18AC622B249FBF3C009C7DE1 /* Specimen.swift */,
+				18AC622B249FBF3C009C7DE1 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,13 +170,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		1872CFFD24932B410044EDED /* Map */ = {
+		1872CFFD24932B410044EDED /* Component */ = {
 			isa = PBXGroup;
 			children = (
 				1872CFFE24932B520044EDED /* Map_MapBox.swift */,
 				1872D00024932B5E0044EDED /* Map_GoogleMap.swift */,
 			);
-			path = Map;
+			path = Component;
 			sourceTree = "<group>";
 		};
 		1872D00224932C4B0044EDED /* Profile */ = {
@@ -205,6 +205,7 @@
 				1872D00F24932F0C0044EDED /* UserDefaultHelpers.swift */,
 				186C15DC2498B9A200EDDB23 /* APICaller.swift */,
 				1854A14A249B2321000C317B /* Observable.swift */,
+				18594D6F24A9A3CC00933354 /* Validate.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -246,8 +247,8 @@
 		18D46EEC248F38DF00D020E6 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				1872CFFD24932B410044EDED /* Component */,
 				186C15DE2498C3C700EDDB23 /* Model */,
-				1872CFFD24932B410044EDED /* Map */,
 				18D46EFD248F4C7500D020E6 /* Screen */,
 			);
 			path = App;
@@ -266,7 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				18D46EF7248F455900D020E6 /* Resource.swift */,
-				18594D6F24A9A3CC00933354 /* Validate.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -445,7 +445,7 @@
 				1854A14B249B2321000C317B /* Observable.swift in Sources */,
 				186C15DA2498ACB900EDDB23 /* CategoriesCell.swift in Sources */,
 				1872D00A24932C8D0044EDED /* OptionCell.swift in Sources */,
-				18AC622C249FBF3C009C7DE1 /* Specimen.swift in Sources */,
+				18AC622C249FBF3C009C7DE1 /* Category.swift in Sources */,
 				1854A14D249B2659000C317B /* HomeViewModel.swift in Sources */,
 				184DADCF24A09555007783ED /* ConvertType + Extension.swift in Sources */,
 				18D46ED9248F359D00D020E6 /* AppDelegate.swift in Sources */,

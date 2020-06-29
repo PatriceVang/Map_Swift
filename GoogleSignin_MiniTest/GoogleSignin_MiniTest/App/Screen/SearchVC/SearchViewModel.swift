@@ -20,8 +20,10 @@ class SearchViewModel {
             if err != nil {
                 print(err?.localizedDescription as Any)
             } else {
-                let dataLocation: [AnyHashable: Any]? = ["markerPOI": resultJson?.results?.compactMap {$0.geometry?.location} as Any,
-                                                         "markerType": "\(text)"]
+                
+                print(resultJson?.coordinate?.map { $0.address})
+                
+                let dataLocation: [AnyHashable: Any]? = ["markerPOI": resultJson?.coordinate as Any, "markerType": "\(text)"]
                 NotificationCenter.default.post(name: .markerPOI, object: nil, userInfo: dataLocation)
             }
         }

@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 
+//test RealmDB
 class Category: Object {
     @objc dynamic var name: String = ""
 }
